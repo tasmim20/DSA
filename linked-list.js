@@ -1,9 +1,8 @@
 class LinkedList {
   constructor() {
-    this.head = null; // Points to the first node in the list
+    this.head = null;
   }
 
-  // Method to add a node at the nth position
   insertAt(value, position) {
     let newNode = new Node(value);
 
@@ -19,7 +18,6 @@ class LinkedList {
     let previous = null;
     let count = 0;
 
-    // Traverse the list until we find the correct position or reach the end
     while (current !== null && count < position) {
       previous = current;
       current = current.next;
@@ -35,7 +33,6 @@ class LinkedList {
     }
   }
 
-  // Helper method to display the list
   printList() {
     let current = this.head;
     let list = "";
@@ -49,9 +46,9 @@ class LinkedList {
 
 let list = new LinkedList();
 
-list.insertAt(10, 0); // Insert 10 at position 0
-list.insertAt(20, 1); // Insert 20 at position 1
-list.insertAt(30, 2); // Insert 30 at position 2
-list.insertAt(15, 1); // Insert 15 at position 1 (between 10 and 20)
+list.insertAt(12, 0);
+list.insertAt(20, 1);
+list.insertAt(25, 2);
+list.insertAt(15, 1);
 
-list.printList(); // Output: 10 -> 15 -> 20 -> 30 -> null
+list.printList();
